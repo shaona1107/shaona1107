@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <script src="../js/angular.js"></script>
+</head>
+<body ng-controller="diantaiCtrl">
+<div class="diantai">
+    <link rel="stylesheet" href="../css/diantai.css">
+    <header><img src="../img/dt.00.png" alt=""></header>
+    <div>
+        <div ng-repeat="(i,j) in data.top">
+            <p>{{i}}</p>
+            <dl ng-repeat="(a,o) in j">
+                <dt><img src="../{{o.img}}" alt=""></dt>
+                <dd><p>{{o.title}}</p>
+                    <span>{{o.content}}</span>
+                </dd>
+            </dl>
+        </div>
+        <div ng-repeat="(i,j) in data.bottom">
+            <p>{{i}}</p>
+            <ul>
+                <li ng-repeat="(a,o) in j">
+                    <img src="../{{o.img}}" alt=""><br>
+                    <span>{{o.title}}</span></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<script src="../js/diantai.js"></script>
+</body>
+</html>
